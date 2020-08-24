@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  width: 100%;
+  height: 150px;
+  background-color: white;
+}
+
+body {
+  background-color: rgba(190, 190, 190, 0.993);
+}
+
+.card-content {
+  background-color: white;
+  position: absolute;
+  top: 55px;
+  left: 23%;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(30, 96, 172);
+  box-shadow: 0 0 20px #2187e7b3;
+}
+
+img {
+  position: relative;
+  left: 0;
+  width: 450px;
+}
+
+.card {
+  height: 400px;
+  align-items: center;
+  width: 55%;
+}
+
+h1 {
+  color: rgb(30, 96, 172);
+  font-size: 40px;
+}
+
+hr {
+  border: 1px solid rgb(30, 96, 172);
+  opacity: 0.5;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(30, 96, 172);
+  margin-top: 7px;
+  height: 68px;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.fab {
+  font-size: 32px;
+  color: white;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.fab:hover {
+  transform: scale(1.5);
+}
+
+.title1 {
+  color: rgb(30, 96, 172);
+  font-size: 25px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 400px;
+  text-align: center;
+}
+
+.percentage {
+  background-color: white;
+  margin-left: 25%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  border: 1px solid rgb(30, 96, 172);
+  box-shadow: 0 0 20px #2187e7b3;
+}
+
+.paragraph {
+  width: 400px;
+}
+
+.skills {
+  width: 400px;
+  margin: 60px auto;
+}
+
+.skills li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.bar {
+  background: rgba(0, 255, 255, 0.603);
+  display: block;
+  height: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #2187e7b3;
+}
+
+.bar span {
+  height: 5px;
+  float: left;
+  background: #2187e7;
+}
+
+.html {
+  width: 90%;
+  animation: html 3s;
+}
+
+.css {
+  width: 80%;
+  animation: css 3s;
+}
+
+.js {
+  width: 10%;
+  animation: js 3s;
+}
+
+.mobileappdev {
+  width: 3%;
+  animation: mobileappdev 3s;
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+@keyframes mobileappdev {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 3%;
+  }
+}
+
+.title2 {
+  color: rgb(30, 96, 172);
+  font-size: 25px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-top: 9px;
+  margin-bottom: 10px;
+  margin-left: -3px;
+  box-shadow: 0 0 10px rgb(30, 96, 172);
+}
+
+/* Container around content */
+.container {
+  margin-bottom: -75px;
+  padding: 13px 17px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: -7px;
+  background-color: rgb(30, 96, 172);
+  top: 35px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 30px;
+  width: 0;
+  z-index: 1;
+  right: 7px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 30px;
+  width: 0;
+  z-index: 1;
+  left: 7px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -8px;
+}
+
+/* The actual content */
+.content {
+  padding: 14px 26px;
+  background-color: white;
+  position: relative;
+  border: 2px solid white;
+  box-shadow: 5px 6px 8px grey;
+}
+
+h2 {
+  color: rgb(30, 96, 172);
+  font-size: 20px;
+}
+
+p {
+  font-size: 15px;
+  color: rgb(153, 152, 152);
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 15px;
+  width: 100px;
+  height: 17px;
+  background-color: rgb(30, 96, 172);
+  text-align: center;
+  color: white;
+  box-shadow: 5px 6px 8px grey;
+}
+
+h4::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 72px;
+  width: 0px;
+  z-index: 1;
+  right: 436px;
+  border-left: 14px solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 28px solid rgb(30, 96, 172);
+}
