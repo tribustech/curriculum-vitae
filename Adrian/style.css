@@ -5,8 +5,7 @@
 }
 
 .background {
-  width: 100%;
-  margin: 0;
+  width: auto;
   height: 150px;
   background-color: rgb(30, 96, 172);
 }
@@ -100,6 +99,8 @@ h3 {
   width: 100%;
   margin-top: 350px;
   margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -226,6 +227,8 @@ h3 {
   font-weight: bold;
   width: 100%;
   margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -359,9 +362,117 @@ h4::before {
   border-bottom: 28px solid rgb(30, 96, 172);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 760px) {
+  .background {
+    width: 760;
+    background-color: rgb(30, 96, 172);
+  }
   .card-content {
-    width: 480px;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 485px;
+    display: block;
+  }
+  img {
+    width: 200px;
+    margin-left: 40%;
+  }
+  h1 {
+    margin-top: 0px;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  h3 {
+    font-size: 12px;
+    text-align: center;
+  }
+  .card {
+    height: 250px;
+  }
+  .card p {
+    margin-left: 250px;
+    font-size: 14px;
+    line-height: 12px;
+  }
+  .rightText {
+    margin-left: 350px;
+    top: -18px;
+    font-size: 14px;
+    line-height: 12px;
+  }
+  .footer {
+    bottom: 10px;
+  }
+  .fab {
+    font-size: 16px;
+    margin: 0px 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .percentage {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: block;
+    height: 360px;
+    padding-top: 40px;
+  }
+  .paragraph {
+    width: 760px;
+  }
+  .paragraph p {
+    text-align: justify;
+    justify-content: center;
+    padding-right: 40px;
+    margin-left: 40px;
+  }
+  .title1 {
+    width: 760px;
+    font-size: 20px;
+    margin-top: 430px;
+    margin-bottom: 20px;
+  }
+  .title2 {
+    width: 760px;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  .timeline {
+    width: 760px;
+    margin-top: 20px;
+  }
+  .timeline::after {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .content {
+    padding: 10px 6px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 12px;
+  }
+  h4 {
+    font-size: 12px;
+    width: 60px;
+  }
+  h4::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .background {
+    width: auto;
+  }
+  .card-content {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     height: 485px;
     display: block;
   }
@@ -388,7 +499,7 @@ h4::before {
     line-height: 12px;
   }
   .rightText {
-    margin-left: 200px;
+    margin-left: 180px;
     top: -18px;
     font-size: 14px;
     line-height: 12px;
@@ -403,9 +514,11 @@ h4::before {
     padding-bottom: 3px;
   }
   .percentage {
-    width: 480px;
+    width: auto;
     display: block;
     height: 360px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding-top: 20px;
   }
   .paragraph {
@@ -418,11 +531,13 @@ h4::before {
     margin-left: 40px;
   }
   .title1 {
+    width: 480px;
     font-size: 20px;
     margin-top: 430px;
     margin-bottom: 20px;
   }
   .title2 {
+    width: 480px;
     font-size: 20px;
     margin-top: 40px;
   }
