@@ -38,7 +38,7 @@ p {
 
 .background2 {
   background: url(./background2.jpg);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .container,
