@@ -33,11 +33,11 @@ p {
 }
 
 .background1 {
-  background: url(/img/background1.jpg);
+  background: url("img/background1.jpg");
 }
 
 .background2 {
-  background: url(/img/background2.jpg);
+  background: url("img/background2.jpg");
   color: rgb(41, 41, 41);
 }
 
