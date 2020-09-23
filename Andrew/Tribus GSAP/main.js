@@ -18,13 +18,9 @@ website_tl = new TimelineMax();
 /* Setup stage */
 
 website_tl
-  .fromTo(
-    full_hook,
-    2,
-    { yPercent: -100 },
-    { yPercent: 0, ease: Power3.easeOut }
-  )
-  .to(strings, 1, { opacity: 0 })
+  .fromTo(full_hook, 2, { yPercent: -100 }, { yPercent: -10 })
+  .to(strings, 0.5, { opacity: 0 }, "-=0.5")
+  .to(website, 0.5, { yPercent: 40, ease: "bounce" }, "-=0.5")
   .to(hook, 2, { yPercent: -20, ease: Power3.easeInOut }, "-=1")
   .fromTo(
     moto_stiv,
