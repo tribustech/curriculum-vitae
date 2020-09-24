@@ -11,11 +11,28 @@ var full_hook = document.getElementById("full_hook"),
   wheel2 = document.getElementById("wheel2"),
   orange_item = document.getElementById("orange_item"),
   platform = document.getElementById("platform"),
+  angular_logo = document.getElementById("angular_logo"),
+  react_logo = document.getElementById("react_logo"),
+  logos = document.querySelectorAll(".logo"),
   website_tl,
-  motostiv_tl;
+  logo_tl;
 
 website_tl = new TimelineMax();
+logo_tl = new TimelineMax({ repeat: -1 });
 /* Setup stage */
+// boot up the first call
+
+console.log(logos);
+// logo_tl.staggerTo(
+//   logos,
+//   1,
+//   { autoAlpha: 1, repeat: 1, yoyo: true, repeatDelay: 0.5 },
+//   2.5
+// );
+
+logo_tl
+  .staggerTo(logos, 0.5, { opacity: 0 }, 0.25)
+  .staggerTo(logos, 0.5, { opacity: 1 }, 0.25, "+=3");
 
 website_tl
   .fromTo(full_hook, 6, { yPercent: -100 }, { yPercent: -10 })
