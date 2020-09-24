@@ -18,7 +18,44 @@ website_tl = new TimelineMax();
 /* Setup stage */
 
 website_tl
-  .fromTo(full_hook, 2, { yPercent: -100 }, { yPercent: -10 })
+  .fromTo(full_hook, 6, { yPercent: -100 }, { yPercent: -10 })
+  .fromTo(
+    full_hook,
+    2,
+    {
+      ease: Power1.easeInOut,
+      transformOrigin: "top center",
+      rotation: 20,
+    },
+    {
+      ease: Power1.easeInOut,
+      transformOrigin: "top center",
+      rotation: -20,
+      repeat: 2,
+    },
+    "-=6"
+  )
+  .fromTo(
+    full_hook,
+    2,
+    {
+      ease: Power1.easeInOut,
+      transformOrigin: "top center",
+      rotation: -20,
+      repeat: 2,
+    },
+    {
+      ease: Power1.easeInOut,
+      transformOrigin: "top center",
+      rotation: 20,
+    },
+    "-=4"
+  )
+  .to(full_hook, 2, {
+    ease: Power1.easeInOut,
+    transformOrigin: "top center",
+    rotation: 0,
+  })
   .to(strings, 0.5, { opacity: 0 }, "-=0.5")
   .to(website, 0.5, { yPercent: 40, ease: "bounce" }, "-=0.5")
   .to(hook, 2, { yPercent: -20, ease: Power3.easeInOut }, "-=1")
