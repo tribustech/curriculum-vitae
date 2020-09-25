@@ -18,21 +18,19 @@ var full_hook = document.getElementById("full_hook"),
   logo_tl;
 
 website_tl = new TimelineMax();
-logo_tl = new TimelineMax({ repeat: -1 });
+logo_tl = new TimelineMax();
 /* Setup stage */
 // boot up the first call
 
-console.log(logos);
-// logo_tl.staggerTo(
-//   logos,
-//   1,
-//   { autoAlpha: 1, repeat: 1, yoyo: true, repeatDelay: 0.5 },
-//   2.5
-// );
-
-logo_tl
-  .staggerTo(logos, 0.5, { opacity: 0 }, 0.25)
-  .staggerTo(logos, 0.5, { opacity: 1 }, 0.25, "+=3");
+gsap.to(logos, 1, {
+  autoAlpha: 1,
+  stagger: {
+    each: 2,
+    repeat: 1,
+    yoyo: true,
+  },
+  repeat: -1,
+});
 
 website_tl
   .fromTo(full_hook, 6, { yPercent: -100 }, { yPercent: -10 })
