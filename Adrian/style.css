@@ -573,7 +573,7 @@ h4::before {
   }
   .card-content {
     width: 360px;
-    margin: 0 10px;
+    margin: 0 auto;
     height: 485px;
     display: block;
   }
