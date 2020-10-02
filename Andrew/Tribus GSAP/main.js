@@ -341,12 +341,12 @@ function flyBirds() {
   birds_left_tl.pause();
   birds_right_tl.pause();
 
-  fly_tl.to(bird_left, 6, { x: 2500, y: -800, ease: "expo.out" }).to(
+  fly_tl.to(bird_left, 6, { x: 3000, y: -1000, ease: "expo.out" }).to(
     bird_right,
     6,
     {
-      x: -2500,
-      y: -800,
+      x: -3000,
+      y: -1000,
       ease: "expo.out",
     },
     "-=6"
