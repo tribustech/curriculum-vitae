@@ -27,6 +27,27 @@ var full_hook = document.getElementById("full_hook"),
   website_tl,
   birds_tl;
 gsap.registerPlugin(CustomEase);
+gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray(".panel");
+
+gsap.to(document.querySelector(".scroll"), 0.5, {
+  y: 20,
+  yoyo: true,
+  repeat: -1,
+});
+
+gsap.to(sections, {
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".panel",
+    start: "top top",
+    pin: true,
+    pinSpacing: false,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+  },
+});
 
 website_tl = new TimelineMax();
 birds_left_tl = new TimelineMax({ repeat: -1 });
